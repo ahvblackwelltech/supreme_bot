@@ -29,9 +29,9 @@ def order(k):
 	driver.find_element_by_xpath('//*[@id="nnaerb"]').send_keys(k["card_number"])
 	driver.find_element_by_xpath('//*[@id="orcer"]').send_keys(k["card_cvv"])
 	# card month
-	driver.find_element_by_xpath('//*[@id="credit_card_month"]/option[4]').format(k["credit_card_month"]).click()
+	driver.find_element_by_xpath('//*[@id="credit_card_month"]/option[{}]').format(k["credit_card_month"]).click()
 	#card year 
-	driver.find_element_by_xpath('//*[@id="credit_card_year"]/option[6]').format(k["credit_card_year"]).click()
+	driver.find_element_by_xpath('//*[@id="credit_card_year"]/option[{}]').format(k["credit_card_year"]).click()
 	# terms and conditions
 	driver.find_element_by_xpath('//*[@id="cart-cc"]/fieldset/p[2]/label/div/ins').click()
 	# process payment
